@@ -1,6 +1,44 @@
-$color-primary: #090;
+
+$color-primary: rgb(139, 182, 139);
 
 
-h1 {
+h1, h3 {
     color:$color-primary;
+    font-family: Abril Fatface;
+    
 }
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-image: url(../media/fireworks.jpg);
+    color: gray;
+}
+
+.contaier {
+background: none;
+
+}
+
+.jumbotron {
+    background-color:rgb(37, 37, 37) ;
+}
+
+
+
+
+.center {
+    text-align: center;
+}
+
+.btn-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-background {
+    margin: 0;
+}
+

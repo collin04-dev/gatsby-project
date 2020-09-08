@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `First Gatsby Site with GraphQl`,
-    description: `The Description`
+    title: `The Great Gatsby Restuaraunt`,
+    description: `Now Serving Leonardo Dicaprio`
   },
 
   plugins: [
@@ -19,6 +19,16 @@ module.exports = {
         accessToken: `juzJIbRPUiLesBLGfg5tx69h_mGTczaShlPt15IbfYk`
       },
     },
-    `gatsby-plugin-sass`
+
+    `gatsby-plugin-sass`,
+
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Abril Fatface`,
+        ],
+      },
+    }
   ],
 }
