@@ -6,5 +6,19 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `First Gatsby Site with GraphQl`,
+    description: `The Description`
+  },
+
+  plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `oz7n958hgdfa`,
+        accessToken: `juzJIbRPUiLesBLGfg5tx69h_mGTczaShlPt15IbfYk`
+      },
+    },
+    `gatsby-plugin-sass`
+  ],
 }
