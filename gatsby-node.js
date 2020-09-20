@@ -5,21 +5,21 @@ exports.createPages = ({ actions, graphql }) => {
   
     const recipeTemplate = path.resolve(`src/templates/recipeTemplate.js`)
   
-    return graphql(` {
-    
-        allContentfulRecipes (limit: 3){
-          nodes {
-            name
-            description {
-              description
-            }
-            image {
-              file {
-                url
-              }
+    return graphql(` 
+    query MyQuery {
+      allContentfulRecipes(filter: {node_locale: {eq: "en-US"}}) {
+        nodes {
+          name
+          description {
+            description
+          }
+          image {
+            file {
+              url
             }
           }
         }
+      }
     }
     `).then(result => {
       if (result.errors) {

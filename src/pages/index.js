@@ -8,7 +8,7 @@ export default function Home({data}) {
       <>
 
             <div class="center video-background">
-              <video width="800" height="450" controls autoPlay>
+              <video width="800" height="450" controls autoPlay muted>
                   <source src={gatsbyVideo} type="video/mp4" />
                   Your browser does not support the video tag.
               </video>
@@ -28,7 +28,7 @@ export default function Home({data}) {
                   <p class="card-text">{node.name}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href={node.name} class="btn btn-outline-dark">Learn More!</a>
+                      <a href={node.name} class="btn btn-outline-light">Learn More!</a>
                     </div>
                   </div>
                 </div>
@@ -45,7 +45,7 @@ export default function Home({data}) {
 
 export const query = graphql`
 query MyQuery {
-  allContentfulRecipes (limit: 3){
+  allContentfulRecipes(filter: {node_locale: {eq: "en-US"}}) {
     nodes {
       name
       description {
@@ -59,4 +59,5 @@ query MyQuery {
     }
   }
 }
+
 `
